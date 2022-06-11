@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breeze</title>
+    <style>
+        p {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        textarea{
+            width: 1496px;
+            height: 88px;
+            min-height: 100px;
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            resize: vertical;
+            padding-left: 60px;
+        }
+        
+        input {
+            width: 100%;
+            height: auto;
+            min-height: 50px
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            padding-left: 60px;
+        }
+
+        .position-relative {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            position: absolute;
+            top: 22px;
+            left: 3px;
+            height: 21px;
+            width: 50px;
+            border-radius: 10px;
+            border: 0px solid gray;
+            font-size: 10px;
+            cursor: pointer;
+            background-color: rgb(200, 230, 255);
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: rgb(150, 200, 255);
+        }
+    </style>
+    <script>
+        function copy(id) {
+            document.getElementById(id).select();
+            document.execCommand('copy');
+        }
+    </script>
+</head>
+<body>
+<p>
+
+<div class="position-relative">
+    <button onclick="copy('word')">Copy</button>
+    <span class="label">Word</span>
+    <br>
+    <input type='text' value='breeze' id="word"/>
+</div>
+
+<div class="position-relative">
+    <button onclick="copy('verb_nourn_etc')">Copy</button>
+    <span class="label">Verb, noun, ...</span>
+    <br>
+    <input type='text' value='noun' id="verb_nourn_etc"/>
+</div>
+
+<div class="position-relative">
+    <button onclick="copy('pronunciation')">Copy</button>
+    <span class="label">Pronunciation</span>
+    <br>
+    <input type='text' value='['IPA: /bɹiːz/', 'Rhymes: -iːz']' id="pronunciation"/>
+</div>
+
+<div class="position-relative">
+    <button onclick="copy('definition')">Copy</button>
+    <span class="label">Definition</span>
+    <br>
+    <textarea id="definition">1. breeze (plural breezes)
+2. A light, gentle wind.
+3. (figuratively) Any activity that is easy, not testing or difficult.
+4. (cricket) Wind blowing across a cricket match, whatever its strength.
+5. Ashes and residue of coal or charcoal, usually from a furnace. See Wikipedia article on Clinker.
+6. An excited or ruffled state of feeling; a flurry of excitement; a disturbance; a quarrel.
+7. A brief workout for a racehorse.
+</textarea>
+</div>
+
+<div class="position-relative">
+    <button onclick="copy('etymology')">Copy</button>
+    <span class="label">Etymology</span>
+    <br>
+    <textarea id="etymology">From the earlier (nautical) term brise, brize (“breeze”), from Middle English brees (“wind”). Ultimate origin obscure.
+Variously supposed to derive from a Germanic source like Saterland Frisian Briese (“breeze”), West Frisian brys (“a cool wind”), Dutch bries (“breeze”), early Dutch brysen (“to blow cool and fresh”), or from Spanish brisa (“northeast wind”).The earliest attestations are in Middle English brees (1460), Catalan brisa, and Italian brezza (all in 15th century), with Spanish (1504) and Portuguese briza (16th century) following closely after. The aforementioned Dutch cognates and French brise, however, are attested later than the term in English. The only internal hypothesis for any of those languages is a corruption of Old Occitan bisa (“strong wind”), which is not widely accepted.
+Compare also Albanian breshër (“hail”).
+</textarea>
+</div>
+
+</p>
+</body>
+</html>
